@@ -15,6 +15,7 @@ function handleSearch(event) {
   const search = event.target.value.trim().toLowerCase();
   if (search === '') {
     refs.listRef.innerHTML = '';
+    return;
   }
   fetchCountries(search)
     .then(data => {
